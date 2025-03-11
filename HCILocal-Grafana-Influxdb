@@ -12,11 +12,11 @@
     $CSServerName="Grafana03"
 
     #SSL cert will be reloaded there
-    $DomainControllerName="VTMFADINFRA02"
+    $DomainControllerName="MyDomainController.lab"
 
     #grafana variables
     $LDAPservers03="Mydomain.local" #for multiple "10.0.0.2 10.0.0.3"
-    $OU_For_User_And_Group="OU=Administrative Users,OU=AZSHCI,DC=tmfinfra,DC=lab" # Get-ADOrganizationalUnit -Filter 'Name -like "*"' | Format-Table Name, DistinguishedName -A
+    $OU_For_User_And_Group="OU=Administrative Users,OU=AZSHCI,DC=MyDomainController,DC=lab" # Get-ADOrganizationalUnit -Filter 'Name -like "*"' | Format-Table Name, DistinguishedName -A
     $Grafana_LDAPuser="GrafanaUser01" #account to query LDAP
     $Grafana_LDAPuserpwd="Ldap!AD@6#"
     $Grafana_AdminsGroupName="GrafanaAdmin01" #Grafana Admins Group
@@ -154,7 +154,7 @@ AlternateSignatureAlgorithm=0
     Invoke-Command -ComputerName $CSServerName -Credential $Credentials -Authentication Credssp -ScriptBlock {
         $CaProperties = @{
             #CACommonName        = "$LDAPservers03-Root-CA"
-			CACommonName        = "tmfinfra-Root-CA"
+			CACommonName        = "MyDomainController-Root-CA"
             CAType              = "EnterpriseRootCA"
             CryptoProviderName  = "ECDSA_P256#Microsoft Software Key Storage Provider"
             HashAlgorithmName   = "SHA256"
