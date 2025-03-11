@@ -15,7 +15,7 @@
     $DomainControllerName="VTMFADINFRA02"
 
     #grafana variables
-    $LDAPservers03="tmfinfra.lab" #for multiple "10.0.0.2 10.0.0.3"
+    $LDAPservers03="Mydomain.local" #for multiple "10.0.0.2 10.0.0.3"
     $OU_For_User_And_Group="OU=Administrative Users,OU=AZSHCI,DC=tmfinfra,DC=lab" # Get-ADOrganizationalUnit -Filter 'Name -like "*"' | Format-Table Name, DistinguishedName -A
     $Grafana_LDAPuser="GrafanaUser01" #account to query LDAP
     $Grafana_LDAPuserpwd="Ldap!AD@6#"
@@ -24,10 +24,10 @@
 	
 	#HCI Host
 	# add the HCI hosts below
-	$AzSHCI1="AZHCILAB01"
-	$AzSHCI2="AZHCILAB02"
-	$AzSHCI3="AZHCILAB03"
-	$AzSHCI_Cluster="azhcilabclus"
+	$AzSHCI1="AZHCInode01"
+	$AzSHCI2="AZHCInode02"
+	$AzSHCI3="AZHCInode03"
+	$AzSHCI_Cluster="azhciNodeClus"
 
     #firewall vars
     $IPSecEnabledServers=$GrafanaServerName,$AzSHCI1,$AzSHCI2,$AzSHCI3
