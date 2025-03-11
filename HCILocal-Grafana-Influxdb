@@ -18,7 +18,7 @@
     $LDAPservers03="tmfinfra.lab" #for multiple "10.0.0.2 10.0.0.3"
     $OU_For_User_And_Group="OU=Administrative Users,OU=AZSHCI,DC=tmfinfra,DC=lab" # Get-ADOrganizationalUnit -Filter 'Name -like "*"' | Format-Table Name, DistinguishedName -A
     $Grafana_LDAPuser="GrafanaUser01" #account to query LDAP
-    $Grafana_LDAPuserpwd="Peg@seOS"
+    $Grafana_LDAPuserpwd="Ldap!AD@6#"
     $Grafana_AdminsGroupName="GrafanaAdmin01" #Grafana Admins Group
     $Grafana_Admins_To_Add="LabAdmin"
 	
